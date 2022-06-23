@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+For UI purposes, i used html,css,bootstrap.
 
-Things you may want to cover:
+Database : postgres
+Framework : Rails (MVC PATTERN same as spring)
+Language : Ruby
+OS : UBUNTU
 
-* Ruby version
+Please click the below link for assignment screenshots:
 
-* System dependencies
+https://postimg.cc/gallery/mbM0PL4
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
