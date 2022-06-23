@@ -1,0 +1,71 @@
+<div class="d-flex flex-row">
+<h1 class="art-hdng">TOP 10 SONGS</h1>
+
+<%= button_to "+ ADD SONG", new_song_path,method: :get, class:"btn btn-secondary total-left"%>
+
+</div>
+
+
+<table class="table">
+    <tr class="tab-head">
+        <th>Artwork</th>
+        <th>Song</th>
+        <th>Date Of Release</th>
+        <th>Artists<th>
+    </tr>
+
+    <% @songs.each do |song| %>
+        <tr>
+            <td>
+                <% if song.profile_image.attached? %>
+                <%= image_tag song.profile_image, style: "width: 100px", class:"p-1" %>
+                <%end%>
+            </td>
+            <td class="img-nme">
+                <%= song.name  %>
+            </td>
+            <td class="img-nme">
+                <%= song.dor  %>
+            </td>
+            <td class="img-nme">
+                <%= song.artistname %>
+            </td>
+        </tr>
+    <%end%>
+<table>
+
+
+
+
+
+
+
+
+
+
+
+<h1 class="art-hdng">TOP 10 ARTISTS</h1>
+
+<table class="table">
+        
+        <tr class="tab-head">
+            <th>Artist</th>
+            <th>Date of Birth</th>
+            <th>Song</th>
+        </tr>
+
+        <% @artists.each do |artist| %>
+            <tr>
+                <td class="img-nme">
+                <%= artist.name %>
+                </td>
+                <td class="img-nme">
+                <%= artist.dob %>
+                </td>
+                <td class="img-nme">
+                <%= artist.songname %>
+                </td>
+            </tr>
+        <%end%>
+<table>
+

@@ -1,0 +1,28 @@
+<%= form_with model:@song do  |f| %>
+  <div class="field-form">
+      <%= f.label :Name %><br />
+      <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+  </div>
+
+  <div class="field-form">
+    <%= f.label :Date_Released %><br />
+    <%= f.date_field :dor, autofocus: true, autocomplete: "dor" %>
+  </div>
+ 
+
+  <div class="field-form">
+    <%= f.label :profile_image %><br />
+    <%= f.file_field :profile_image, autofocus: true, autocomplete: "profile_image" %>
+  </div>
+
+   <div class="field-form">
+    <%= f.label :Artists %>
+    <%= f.select :artistname, options_from_collection_for_select(Artist.all,:name,:name)%>
+    </div>
+  
+    <div class="actions">
+      <%= f.submit "Save",class: "save-button" %>
+    </div> 
+<% end %>
+
+  <%= button_to "ADD ARTIST", new_artist_path,method: :get, class:"btn btn-primary"%>

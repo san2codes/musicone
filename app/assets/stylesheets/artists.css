@@ -1,0 +1,33 @@
+.tab-head{
+    background-color: rgb(71, 67, 67);
+    color:white;
+}
+.art-hdng{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    margin-left: 15px;
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+}
+.total-left{
+    margin-left: 900px;
+    margin-top:20px;
+}
+.img-nme{
+    font-weight:bold;
+    font-size:18px;
+}
+td{
+    vertical-align: middle;
+}
+
+.frm{
+    background-color: rgb(209, 194, 194);
+}
+
+.maright{
+    font-weight:bold;
+    font-size:18px;
+    color: white;
+}

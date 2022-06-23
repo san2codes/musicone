@@ -1,0 +1,46 @@
+
+<%= form_with model:@artist do  |f| %>
+        <div class="mb-3">
+          <%= f.label :name, style: "display: block", class: "form-label" %>
+          <%= f.text_field :name, class: "form-control" %>
+          <div style="color: red">
+            <% if @artist.errors.include?(:name) %>
+            <% @artist.errors.full_messages_for(:name).each do |error_message| %>
+            <%= error_message %>.
+            <% end %>
+            <% end %>
+          </div>
+        </div>
+
+
+        <div class="mb-3">
+        <%= f.label :dob, style: "display: block", class: "form-label" %>
+        <%= f.text_field :dob, class: "form-control" %>
+        <div style="color: red">
+        <% if @artist.errors.include?(:dob) %>
+          <% @artist.errors.full_messages_for(:dob).each do |error_message| %>
+            <%= error_message %>.
+          <% end %>
+        <% end %>
+        </div>
+        </div>
+
+
+        <div class="mb-3">
+        <%= f.label :bio, style: "display: block", class: "form-label" %>
+        <%= f.text_field :bio, class: "form-control" %>
+        <div style="color: red">
+        <% if @artist.errors.include?(:dob) %>
+          <% @artist.errors.full_messages_for(:dob).each do |error_message| %>
+            <%= error_message %>.
+          <% end %>
+        <% end %>
+        </div>
+        </div>
+
+        <div class="actions">
+        <%= f.submit "Save",class:"loginbtn mt-3" %>
+        </div>
+<% end %>
+
+    

@@ -1,0 +1,36 @@
+<h1 class="art-hdng">Adding a New Song</h1>
+
+<div class="frm">
+
+<%= form_with model:@song do  |f| %>
+  <div class="field-form p-3 col-md-6">
+      <%= f.label :Name %>
+      <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+  </div>
+
+  <div class="field-form p-3 col-md-6">
+    <%= f.label :Date_Released %>
+    <%= f.date_field :dor, autofocus: true, autocomplete: "dor" %>
+  </div>
+ 
+
+  <div class="field-form p-3">
+    <%= f.label :profile_image %>
+    <%= f.file_field :profile_image, autofocus: true, autocomplete: "profile_image" %>
+  </div>
+
+   <div class="field-form p-3">
+    <%= f.label :Artists %>
+    <%= f.select :artistname, options_from_collection_for_select(Artist.all,:name,:name)%>
+    </div>
+  
+    <div class="actions p-3" >
+      <%= f.submit "Save",class: "save-button" %>
+    </div> 
+<% end %>
+
+<p>* If you do not find an artist,add Here </p>
+  <div class="p-3">
+  <%= button_to "ADD ARTIST", new_artist_path,method: :get, class:"btn btn-secondary"%>
+  </div>
+  </div>
